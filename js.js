@@ -64,6 +64,11 @@ function createPokemonCard(pokemon) {
 	}
 	pokeInnerHTML += `</small>
         </div>
+		<div class="poke-stats">
+    <div class="poke-stat"><span>HP:</span> ${pokemon.stats[0].base_stat}</div>
+    <div class="poke-stat"><span>Attack:</span> ${pokemon.stats[1].base_stat}</div>
+    <div class="poke-stat"><span>Speed:</span> ${pokemon.stats[5].base_stat}</div>
+  </div>
     `;
 
 	pokemonEl.innerHTML = pokeInnerHTML;
@@ -87,9 +92,31 @@ function filterPokemons(type) {
 		card.style.display = 'none';
 	  }
 	});
-  }
+}
+
+const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
+
+searchButton.addEventListener('click', () => {
+  const searchQuery = searchInput.value.toLowerCase();
+  filterPokemonsBySearchQuery(searchQuery);
+});
+
+function filterPokemonsBySearchQuery(searchQuery) {
+  const pokemonCards = document.querySelectorAll('.pokemon');
+  pokemonCards.forEach(card => {
+    const name = card.querySelector('.name').textContent.toLowerCase();
+    const number = card.querySelector('.number').textContent.slice(1);
+    if (name.includes(searchQuery) || number.includes(searchQuery)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
 
 fetchPokemons();
+
 
 
 

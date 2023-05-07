@@ -80,6 +80,7 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 8px;
+    margin-top: 10px;
   }
   
   .search-bar input[type="text"] {
@@ -97,6 +98,7 @@ h1 {
     padding: 8px 16px;
     margin-left: 8px;
     cursor: pointer;
+
   }
   
   .search-bar button:hover {
@@ -105,4 +107,55 @@ h1 {
 
 label {
     margin-right: 10px;
+}
+
+.poke-stats {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .poke-stat {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .poke-stat span {
+    width: 60px;
+    font-weight: bold;
+
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  #search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 250px;
+  }
+  
+  #search-btn {
+    background-color: #29adff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #search-btn:hover {
+    background-color: #4dc4ff;
+  }
+  
+.type{
+    font-size: 15px;
 }
