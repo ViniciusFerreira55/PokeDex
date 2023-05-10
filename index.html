@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+</head>
+<body>
+    <h1>PokeDex by Vinícius Ferreira</h1>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search for a Pokémon...">
+        <button type="button" id="search-button">Search</button>
+      </div>
+    <div class="search-bar">
+    <label for="type-select">Escolher o Tipo/Elemento:</label>
+    <select id="type-select">
+  <option value="all">Todos</option>
+  <option value="fire">Fogo</option>
+  <option value="grass">Grama</option>
+  <option value="electric">Elétrico</option>
+  <option value="water">Água</option>
+  <option value="ground">Terra</option>
+  <option value="rock">Pedra</option>
+  <option value="fairy">Fada</option>
+  <option value="poison">Veneno</option>
+  <option value="bug">Inseto</option>
+  <option value="dragon">Dragão</option>
+  <option value="psychic">Psiquico</option>
+  <option value="flying">Voador</option>
+  <option value="fighting">Lutador</option>
+  <option value="normal">Normal</option>
+  <option value="dark">Escuridão</option>
+  <option value="steel">Aço</option>
+  <option value="ghost">Fantasma</option>
+  <option value="ice">Gelo</option>
+</select>
+</div>
+    <div id="poke_container" class="poke_container"></div>
+    <script src="js.js" defer></script>
+</body>
+</html>
